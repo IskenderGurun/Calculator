@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24128" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_3" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,80 +12,122 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lutfen bir sayi giriniz" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EN1-8q-cuT">
-                                <rect key="frame" x="62" y="201" width="276" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lutfen bir sayi giriniz" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EN1-8q-cuT">
+                                <rect key="frame" x="63" y="363" width="276" height="34"/>
                                 <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="276" id="FIH-Zx-vDS"/>
+                                    <constraint firstAttribute="height" constant="34" id="VJL-mS-J7q"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lutfen bir sayi giriniz" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BhK-83-Nxw">
-                                <rect key="frame" x="62" y="258" width="276" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lutfen bir sayi giriniz" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BhK-83-Nxw">
+                                <rect key="frame" x="63" y="437" width="276" height="34"/>
                                 <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="7WW-QW-FAi"/>
+                                    <constraint firstAttribute="width" constant="276" id="DKh-It-akJ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6FB-ZO-dpi">
-                                <rect key="frame" x="88" y="320" width="35" height="35"/>
+                            <button opaque="NO" contentMode="center" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6FB-ZO-dpi">
+                                <rect key="frame" x="63" y="511" width="35" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="+"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="+" cornerStyle="large">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" systemColor="groupTableViewBackgroundColor"/>
+                                    <color key="baseBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="toplama:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IIh-SY-jzp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gsb-au-Oiu">
-                                <rect key="frame" x="153" y="320" width="32" height="35"/>
+                            <button opaque="NO" contentMode="center" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gsb-au-Oiu">
+                                <rect key="frame" x="137" y="511" width="32" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="-"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="-" cornerStyle="large">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" systemColor="groupTableViewBackgroundColor"/>
+                                    <color key="baseBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="cikartma:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bKg-O2-wl8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6HA-Cx-Cp8">
-                                <rect key="frame" x="214" y="320" width="32" height="35"/>
+                            <button opaque="NO" contentMode="center" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6HA-Cx-Cp8">
+                                <rect key="frame" x="239.33333333333334" y="511" width="31.666666666666657" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="*"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="*" cornerStyle="large">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" systemColor="groupTableViewBackgroundColor"/>
+                                    <color key="baseBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="carpma:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zQs-lV-Mgi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gO-26-rzh">
-                                <rect key="frame" x="278" y="320" width="29" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="/"/>
+                            <button opaque="NO" contentMode="center" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gO-26-rzh">
+                                <rect key="frame" x="310" y="512" width="29" height="34.333333333333371"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="/" cornerStyle="large">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" systemColor="groupTableViewBackgroundColor"/>
+                                    <color key="baseBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="bolme:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bZs-pP-nfa"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sonuc" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdm-rU-LSc">
-                                <rect key="frame" x="62" y="399" width="276" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottom" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Sonuc" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdm-rU-LSc">
+                                <rect key="frame" x="71" y="626" width="276" height="39.666666666666629"/>
+                                <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" systemColor="groupTableViewBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="att" translatesAutoresizingMaskIntoConstraints="NO" id="yIn-Qn-2oN">
+                                <rect key="frame" x="66" y="151" width="270" height="172"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="tableCellBlueTextColor"/>
                         <constraints>
-                            <constraint firstItem="9gO-26-rzh" firstAttribute="leading" secondItem="6HA-Cx-Cp8" secondAttribute="trailing" constant="32" id="0zE-pQ-nPZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EN1-8q-cuT" secondAttribute="trailing" constant="55" id="5ly-ls-izs"/>
-                            <constraint firstItem="Gsb-au-Oiu" firstAttribute="baseline" secondItem="6HA-Cx-Cp8" secondAttribute="baseline" id="7Fk-Yr-I5B"/>
-                            <constraint firstItem="EN1-8q-cuT" firstAttribute="leading" secondItem="BhK-83-Nxw" secondAttribute="leading" id="BQE-Bv-O3J"/>
-                            <constraint firstItem="Gsb-au-Oiu" firstAttribute="leading" secondItem="6FB-ZO-dpi" secondAttribute="trailing" constant="30" id="CKJ-b5-Pg7"/>
-                            <constraint firstItem="EN1-8q-cuT" firstAttribute="trailing" secondItem="BhK-83-Nxw" secondAttribute="trailing" id="FQa-1s-5C9"/>
-                            <constraint firstItem="BhK-83-Nxw" firstAttribute="centerX" secondItem="wdm-rU-LSc" secondAttribute="centerX" id="NIG-E4-XMW"/>
-                            <constraint firstItem="EN1-8q-cuT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="62" id="Rvr-2i-enQ"/>
-                            <constraint firstItem="wdm-rU-LSc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="151" id="Syk-Oq-uHT"/>
-                            <constraint firstItem="6FB-ZO-dpi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="88" id="XPT-G9-z0e"/>
-                            <constraint firstItem="6FB-ZO-dpi" firstAttribute="top" secondItem="BhK-83-Nxw" secondAttribute="bottom" constant="28" id="dEl-Ty-IJy"/>
-                            <constraint firstItem="BhK-83-Nxw" firstAttribute="top" secondItem="EN1-8q-cuT" secondAttribute="bottom" constant="23" id="dSZ-qa-6Vw"/>
-                            <constraint firstItem="6FB-ZO-dpi" firstAttribute="baseline" secondItem="Gsb-au-Oiu" secondAttribute="baseline" id="dTf-lj-8Zl"/>
-                            <constraint firstItem="wdm-rU-LSc" firstAttribute="top" secondItem="Gsb-au-Oiu" secondAttribute="bottom" constant="44" id="ePM-wB-QT0"/>
-                            <constraint firstItem="EN1-8q-cuT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="83" id="k9r-gm-4EE"/>
-                            <constraint firstItem="6HA-Cx-Cp8" firstAttribute="baseline" secondItem="9gO-26-rzh" secondAttribute="baseline" id="uh4-uU-y9p"/>
-                            <constraint firstItem="6HA-Cx-Cp8" firstAttribute="leading" secondItem="Gsb-au-Oiu" secondAttribute="trailing" constant="29" id="zK7-6H-wz3"/>
+                            <constraint firstItem="BhK-83-Nxw" firstAttribute="top" secondItem="EN1-8q-cuT" secondAttribute="bottom" constant="40" id="32s-oY-ELc"/>
+                            <constraint firstItem="9gO-26-rzh" firstAttribute="top" secondItem="BhK-83-Nxw" secondAttribute="bottom" constant="40" id="52f-bD-XE2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BhK-83-Nxw" secondAttribute="trailing" constant="63" id="711-Iu-cd8"/>
+                            <constraint firstItem="EN1-8q-cuT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63" id="9b4-h3-2T1"/>
+                            <constraint firstItem="yIn-Qn-2oN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="66" id="9yB-Ko-A7y"/>
+                            <constraint firstItem="6FB-ZO-dpi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63" id="D7P-TB-nXQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EN1-8q-cuT" secondAttribute="trailing" constant="63" id="Vhs-Hq-Epw"/>
+                            <constraint firstItem="Gsb-au-Oiu" firstAttribute="leading" secondItem="6FB-ZO-dpi" secondAttribute="trailing" constant="39" id="WWr-e9-OIH"/>
+                            <constraint firstItem="wdm-rU-LSc" firstAttribute="top" secondItem="Gsb-au-Oiu" secondAttribute="bottom" constant="80" id="WpP-wu-iaH"/>
+                            <constraint firstItem="wdm-rU-LSc" firstAttribute="top" secondItem="6FB-ZO-dpi" secondAttribute="bottom" constant="80" id="YWO-3R-GBP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yIn-Qn-2oN" secondAttribute="trailing" constant="66" id="YZX-5q-9Ea"/>
+                            <constraint firstItem="EN1-8q-cuT" firstAttribute="top" secondItem="yIn-Qn-2oN" secondAttribute="bottom" constant="40" id="cp6-mx-ljM"/>
+                            <constraint firstItem="Gsb-au-Oiu" firstAttribute="top" secondItem="BhK-83-Nxw" secondAttribute="bottom" constant="40" id="dTS-xH-hMo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wdm-rU-LSc" secondAttribute="trailing" constant="55" id="hgN-7X-TH8"/>
+                            <constraint firstItem="wdm-rU-LSc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="55" id="jS8-bZ-ZDL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wdm-rU-LSc" secondAttribute="bottom" constant="140.33000000000001" id="l8X-Iz-1oZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9gO-26-rzh" secondAttribute="trailing" constant="63" id="ooM-aM-oM6"/>
+                            <constraint firstItem="BhK-83-Nxw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63" id="pih-IO-Zjz"/>
+                            <constraint firstItem="wdm-rU-LSc" firstAttribute="top" secondItem="6HA-Cx-Cp8" secondAttribute="bottom" constant="80" id="rcI-Pb-qV6"/>
+                            <constraint firstItem="6HA-Cx-Cp8" firstAttribute="top" secondItem="BhK-83-Nxw" secondAttribute="bottom" constant="40" id="sTa-jE-96Q"/>
+                            <constraint firstItem="6FB-ZO-dpi" firstAttribute="top" secondItem="BhK-83-Nxw" secondAttribute="bottom" constant="40" id="sl0-MS-jqX"/>
+                            <constraint firstItem="9gO-26-rzh" firstAttribute="leading" secondItem="6HA-Cx-Cp8" secondAttribute="trailing" constant="39" id="vRn-Cc-8Hj"/>
+                            <constraint firstItem="yIn-Qn-2oN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="27" id="wVa-1e-Y8G"/>
+                            <constraint firstItem="wdm-rU-LSc" firstAttribute="top" secondItem="9gO-26-rzh" secondAttribute="bottom" constant="80" id="yes-HV-KBY"/>
                         </constraints>
                     </view>
                     <connections>
@@ -97,15 +138,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-34.351145038167935" y="92.957746478873247"/>
+            <point key="canvasLocation" x="-35.820895522388057" y="92.677345537757432"/>
         </scene>
     </scenes>
     <resources>
+        <image name="att" width="5368" height="5121"/>
         <systemColor name="groupTableViewBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="tableCellBlueTextColor">
+            <color red="0.0" green="0.53333333333333333" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
